@@ -22,6 +22,8 @@
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
+  boot.kernel.sysctl."net.ipv4.tcp_challenge_ack_limit" = 999999999;
+
   # Select internationalisation properties.
   i18n = {
     consoleFont = "Lat2-Terminus16";
@@ -51,6 +53,7 @@
 
   programs.ssh.startAgent = false;
   virtualisation.virtualbox.host.enable = true;
+  # nixpkgs.config.virtualbox.enableExtensionPack = true;
 
   nix.trustedBinaryCaches = [ https://hydra.nixos.org ];
 
@@ -83,12 +86,14 @@
     acpi dunst jq i3status i3lock i3blocks
 
     # desktop apps
-    chromium firefox kde5.okular gnome3.gnome_terminal hipchat
-    keepass
+    gnome3.gnome_terminal firefox chromium kde5.okular hipchat
+    keepass slack which
 
     # console apps
-    apg stow
+    apg stow vagrant leiningen tree patchelf
 
+    # other
+    dropbox 
   ];
 
   fonts = {
@@ -135,6 +140,8 @@
     extraGroups = [ "wheel" "disk" "audio" "video" "networkmanager" "systemd-journal" ];
 
   };
+
+  users.extraGroups.vboxusers.members = [ "fingerzam" ];
 
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "16.03";
