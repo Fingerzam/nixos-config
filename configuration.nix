@@ -94,6 +94,19 @@
     # console apps
     apg stow vagrant leiningen tree patchelf
 
+    # texlive
+    (pkgs.texlive.combine {
+      inherit (texlive)
+        pgf
+	beamer
+	collection-basic
+	collection-binextra
+        collection-latex
+        # collection-latexextra
+        collection-latexrecommended
+        collection-mathextra;
+    })
+
     # other
     dropbox openjdk
   ];
