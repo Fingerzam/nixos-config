@@ -20,6 +20,7 @@
   boot.loader.grub.device = "/dev/sda";
 
   networking.hostName = "nixos"; # Define your hostname.
+  networking.networkmanager.enable = true;
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   boot.kernel.sysctl."net.ipv4.tcp_challenge_ack_limit" = 999999999;
@@ -39,6 +40,7 @@
     enable = true;
     windowManager.i3.enable = true;
     # displayManager.slim.enable = true;
+    # displayManager.sessionCommands = "${pkgs.networkmanagerapplet}/bin/nm-applet &";
     desktopManager.xterm.enable = false;
     startGnuPGAgent = true;
     layout = "fi";
@@ -83,7 +85,7 @@
     xlibs.xrandr liberation_ttf pavucontrol
     libnotify gnome3.gnome_themes_standard
     gnome3.adwaita-icon-theme gnome3.gsettings_desktop_schemas
-    acpi dunst jq i3status i3lock i3blocks
+    acpi dunst jq i3status i3lock i3blocks gnome3.dconf
 
     # desktop apps
     gnome3.gnome_terminal firefox chromium kde5.okular hipchat
@@ -93,7 +95,7 @@
     apg stow vagrant leiningen tree patchelf
 
     # other
-    dropbox 
+    dropbox openjdk
   ];
 
   fonts = {
