@@ -54,6 +54,7 @@
 
   programs.ssh.startAgent = true;
   virtualisation.virtualbox.host.enable = true;
+  virtualisation.docker.enable = true;
   # nixpkgs.config.virtualbox.enableExtensionPack = true;
 
   nix.trustedBinaryCaches = [ https://hydra.nixos.org ];
