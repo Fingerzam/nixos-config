@@ -165,7 +165,7 @@
     isNormalUser = true;
     name = "fingerzam";
     uid = 1000;
-    extraGroups = [ "wheel" "disk" "audio" "video" "networkmanager" "systemd-journal" ];
+    extraGroups = [ "wheel" "disk" "audio" "video" "networkmanager" "systemd-journal" "docker" ];
 
   };
 
