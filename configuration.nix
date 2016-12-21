@@ -135,6 +135,9 @@
 
   # List services that you want to enable:
 
+  # Enable automatic updates
+  system.autoUpgrade.enable = true;
+
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
   networking.firewall.allowedTCPPorts = [22];
