@@ -42,7 +42,6 @@
     # displayManager.slim.enable = true;
     # displayManager.sessionCommands = "${pkgs.networkmanagerapplet}/bin/nm-applet &";
     desktopManager.xterm.enable = false;
-    startGnuPGAgent = true;
     layout = "fi";
     xkbOptions = "ctrl:nocaps,eurosign:e";
   };
@@ -53,7 +52,7 @@
     options snd slots=snd-hda-intel
   '';
 
-  programs.ssh.startAgent = false;
+  programs.ssh.startAgent = true;
   virtualisation.virtualbox.host.enable = true;
   # nixpkgs.config.virtualbox.enableExtensionPack = true;
 
