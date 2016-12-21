@@ -64,6 +64,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  programs.fish.enable = true;
+
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
@@ -71,7 +73,7 @@
     file inetutils lftp unzip xlibs.xev rsync fish
 
     # fonts
-    source-code-pro
+    source-code-pro powerline-fonts
 
     # essentials
     tmux htop wget ponysay psmisc gptfdisk gnupg xclip xsel xdotool
@@ -168,6 +170,8 @@
     extraGroups = [ "wheel" "disk" "audio" "video" "networkmanager" "systemd-journal" "docker" ];
 
   };
+
+  users.defaultUserShell = "/run/current-system/sw/bin/fish";
 
   users.extraGroups.vboxusers.members = [ "fingerzam" ];
 
