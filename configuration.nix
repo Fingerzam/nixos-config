@@ -123,6 +123,9 @@
      ];
    };
 
+  # Set default paper size
+  environment.etc.papersize.text = "a4";
+
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
