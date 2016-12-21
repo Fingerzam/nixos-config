@@ -102,6 +102,10 @@
       inherit (texlive)
         pgf
 	beamer
+	tools
+	fancyvrb
+	stmaryrd
+	multirow
 	collection-basic
 	collection-binextra
         collection-latex
