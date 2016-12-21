@@ -92,7 +92,10 @@
     keepass slack which
 
     # console apps
-    apg stow vagrant leiningen tree patchelf
+    apg stow vagrant tree patchelf rustc cargo rustfmt rustracer
+
+    # Clojure development
+    leiningen boot
 
     # texlive
     (pkgs.texlive.combine {
