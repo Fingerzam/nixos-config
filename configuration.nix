@@ -195,61 +195,61 @@
     gtk-xft-rgba=rgb
   '';
 
-  environment.etc."fonts/local.conf".text = ''
-    <?xml version="1.0"?>
-    <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
-    <fontconfig>
+  #environment.etc."fonts/local.conf".text = ''
+  #  <?xml version="1.0"?>
+  #  <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+  #  <fontconfig>
 
-      <match target="font">
-        <edit name="antialias" mode="assign">
-          <bool>true</bool>
-        </edit>
-      </match>
-      <match target="font">
-        <edit name="hinting" mode="assign">
-          <bool>true</bool>
-        </edit>
-      </match>
-       <match target="font">
-        <edit name="hintstyle" mode="assign">
-          <const>hintslight</const>
-        </edit>
-      </match>
-      <match target="font">
-        <edit name="rgba" mode="assign">
-          <const>rgb</const>
-        </edit>
-      </match>
-      <match target="font">
-        <edit mode="assign" name="lcdfilter">
-          <const>lcddefault</const>
-        </edit>
-      </match>
-      <match target="pattern">
-        <test qual="any" name="family"><string>Helvetica</string></test>
-        <edit name="family" mode="assign"><string>Droid Sans</string></edit>
-      </match>
+  #    <match target="font">
+  #      <edit name="antialias" mode="assign">
+  #        <bool>true</bool>
+  #      </edit>
+  #    </match>
+  #    <match target="font">
+  #      <edit name="hinting" mode="assign">
+  #        <bool>true</bool>
+  #      </edit>
+  #    </match>
+  #     <match target="font">
+  #      <edit name="hintstyle" mode="assign">
+  #        <const>hintslight</const>
+  #      </edit>
+  #    </match>
+  #    <match target="font">
+  #      <edit name="rgba" mode="assign">
+  #        <const>rgb</const>
+  #      </edit>
+  #    </match>
+  #    <match target="font">
+  #      <edit mode="assign" name="lcdfilter">
+  #        <const>lcddefault</const>
+  #      </edit>
+  #    </match>
+  #    <match target="pattern">
+  #      <test qual="any" name="family"><string>Helvetica</string></test>
+  #      <edit name="family" mode="assign"><string>Droid Sans</string></edit>
+  #    </match>
 
-      <alias>
-        <family>sans-serif</family>
-        <prefer>
-          <family>Droid Sans</family>
-        </prefer>
-      </alias>
-      <alias>
-        <family>serif</family>
-        <prefer>
-          <family>Droid Serif</family>
-        </prefer>
-      </alias>
-      <alias>
-        <family>monospace</family>
-        <prefer>
-          <family>PragmataPro</family>
-        </prefer>
-      </alias>
+  #    <alias>
+  #      <family>sans-serif</family>
+  #      <prefer>
+  #        <family>Droid Sans</family>
+  #      </prefer>
+  #    </alias>
+  #    <alias>
+  #      <family>serif</family>
+  #      <prefer>
+  #        <family>Droid Serif</family>
+  #      </prefer>
+  #    </alias>
+  #    <alias>
+  #      <family>monospace</family>
+  #      <prefer>
+  #        <family>PragmataPro</family>
+  #      </prefer>
+  #    </alias>
 
-    </fontconfig>
-  '';
+  #  </fontconfig>
+  #'';
 }
 
