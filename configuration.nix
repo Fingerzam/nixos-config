@@ -68,7 +68,7 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
     neovim vim emacs joe git nodejs ponysay mu powertop
-    file inetutils lftp unzip xlibs.xev rsync
+    file inetutils lftp unzip xlibs.xev rsync fish
 
     # fonts
     source-code-pro
