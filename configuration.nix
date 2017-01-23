@@ -157,6 +157,9 @@
   services.postgresql.package = pkgs.postgresql94;
   services.postgresql.authentication = "local all all ident";
 
+  # Enable MongoDB
+  services.mongodb.enable = true;
+
 
   # Enable the KDE Desktop Environment.
   services.xserver.displayManager.kdm.enable = true;
